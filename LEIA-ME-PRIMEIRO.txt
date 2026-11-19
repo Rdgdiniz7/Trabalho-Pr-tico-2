@@ -1,0 +1,21 @@
+LOCADORA - ENTREGA DO FRONT-END
+
+1) Extraia este ZIP inteiro em uma pasta. Ele já contém o back-end ORIGINAL e o front-end novo.
+2) Abra a pasta no VS Code. Instale o SDK .NET 8 se necessário.
+3) Ajuste a connection string DefaultConnection no appsettings.json para o SEU SQL Server.
+4) No terminal do VS Code, execute:
+   dotnet restore
+   dotnet ef database update    (se o banco ainda não existir; requer dotnet-ef)
+   dotnet run --launch-profile http
+5) Abra http://localhost:5229 no navegador.
+   Swagger, se habilitado em Development: http://localhost:5229/swagger
+6) Cadastre primeiro Fabricantes e Categorias; depois Clientes e Veículos; depois Aluguéis.
+7) Em Consultas SQL, teste Fabricante, Categoria, CPF, Período e Nunca alugados.
+8) Grave vídeo de 3 a 5 minutos mostrando telas + duas consultas.
+9) Crie wireframes correspondentes no Figma e coloque o link no relatório LaTeX.
+10) Faça commits pequenos e frequentes no GitHub.
+
+ATENÇÃO: não foi possível executar testes reais contra o seu SQL Server neste ambiente.
+Este ZIP é uma implementação, não uma comprovação de que a integração já foi testada.
+Os filtros das telas de entidade são feitos sobre dados reais carregados por GET da API.
+A página Consultas SQL chama diretamente os cinco endpoints de FiltrosController.
